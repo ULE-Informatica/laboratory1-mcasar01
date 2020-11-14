@@ -120,3 +120,18 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 
 
+
+En mi caso , he decidido solucionar los errores para el caso de compilacion con GCC y estándar C99. En el archivo exampleStrings_warnings, se muestra en el código el porqué de los fallos , con un comentario en la linea de código correspondiente. En el archivo exampleStrings_corregido.c se muestra el código ya corregido sin warnings tras la compilación.
+
+
+Reglas CMU-Cert que incumple el código:
+
+STR31-C: Guarantee that storage for strings has sufficient space for character data
+and the null terminator --> Línea 51
+MSC34-C: Do not use deprecated or obsolescent functions --> Línea 51
+MEM35-C. Always allocate sufficient memory for an object --> Líneas 17,18,61
+STR30-C: Do not attempt to modify String literals --> Línea 101
+ARR02-C. Explicitly specify array bounds, even if implicitly defined by an initializer --> Línea 18
+
+
+
