@@ -72,9 +72,9 @@ int main(int argc, char *argv[])
     
     get_y_or_n();
 
-    printf ("%d",size_array1);
+    printf ("%s",array1);
     printf ("\n");
-    printf ("%d",size_array2);
+    printf ("%s",array2);
     printf ("\n");
  
     puts (s1);
