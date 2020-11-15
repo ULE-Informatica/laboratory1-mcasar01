@@ -22,7 +22,7 @@ enum { BUFFER_MAX_SIZE = 1024 };
 const char* s1 = R"foo"(
 Hello
 World
-)"foo" // Esta utilizando un Raw String literal , este estándar no permite su utilización.
+)"foo" // Esta utilizando un Raw String literal en varias lineas , este estándar no permite su utilización.
 const char* s2 = "\nHello\nWorld\n";
 
 void gets_example_func(void) {
@@ -45,7 +45,7 @@ const char *get_dirname(const char *pathname) {
  
 
 void get_y_or_n(void) {  
-	char response[8]; /*Solo es necesario reservar memoria para un caracter , de esta manera estamos reservando memoria demás sin ningún sentido. Solución: [1]*/
+	char response[8]; /*Solo es necesario reservar memoria para un caracter y el '/0' final, de esta manera estamos reservando memoria demás sin ningún sentido. Solución: [2]*/
 
 	printf("Continue? [y] n: ");  
 	gets(response); /*gets no es considerado seguro y actualmente su uso no está aconsejado , no tiene en cuenta el tamaño del buffer , ya que no lo toma como parámetro , por tanto, es muy fácil que se produzca un desbordamiento del mismo.
@@ -66,12 +66,12 @@ int main(int argc, char *argv[])
     char array4[16];
     char array5 []  = "01234567890123456";
     char *ptr_char  = "new string literal";
-    int size_array1 = strlen("аналитик"); /*No se usa . Solución: Comentar la línea*/
-    int size_array2 = 100; /*No se usa. Solución: Comentar la linea*/
+    int size_array1 = strlen("аналитик"); /*Variable sin utilizar . Solución: Comentar la línea*/
+    int size_array2 = 100; /*Variable sin utilizar. Solución: Comentar la linea*/
     
    // char analitic1[size_array1]="аналитик";
    // char analitic2[size_array2]="аналитик";
-    char analitic3[100]="аналитик"; 
+    char analitic3[100]="аналитик"; /*Variable sin utilizar. Solución: Comentar la línea*/
 
     puts(get_dirname(__FILE__));
 

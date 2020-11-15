@@ -11,14 +11,14 @@ char array2[] = { 'F', 'o', 'o', 'b', 'a', 'r', '\0' };
  
 enum { BUFFER_MAX_SIZE = 1024 };
  
-const char* s1 = "foo(HelloWorld)foo";
+const char* s1 = "foo(HelloWorld)foo"; /*Modificacion del Raw String Literal en diferentes lineas que daba el Warning*/
 const char* s2 = "\nHello\nWorld\n";
 
 void gets_example_func(void) {
   char buf[BUFFER_MAX_SIZE];
  
   if (fgets(buf, sizeof(buf), stdin) == NULL) {
-        
+        /*De aqui he borrado el return*/
   }
   buf[strlen(buf) - 1] = '\0';
 }
@@ -34,10 +34,10 @@ const char *get_dirname(const char *pathname) {
  
 
 void get_y_or_n(void) {  
-	char response[1];
+	char response[2]; //Hay que guardar para la 'y' o la 'n' y añadir el '/0' final.
 
 	printf("Continue? [y] n: ");  
-	fgets(response,sizeof(response),stdin);
+	fgets(response,sizeof(response),stdin); //Se cambia el gets() por fgets() por el problema comentado de desbordamiento de buffer
 
 	if (response[0] == 'n') 
 		exit(0);  
@@ -54,11 +54,11 @@ int main(int argc, char *argv[])
     char array4[16];
     char array5 []  = "01234567890123456";
     char *ptr_char  = "new string literal";
-    /* int size_array1 = strlen("аналитик"); NO SE USA */
-    /* int size_array2 = 100; */
+    /* int size_array1 = strlen("аналитик"); Variable sin utilizar */
+    /* int size_array2 = 100;  Variable sin utilizar*/
    // char analitic1[size_array1]="аналитик";
    // char analitic2[size_array2]="аналитик";
-  /*char analitic3[100]="аналитик"; no se usa*/
+  /*char analitic3[100]="аналитик"; Variable sin utilizar*/
 
     puts(get_dirname(__FILE__));
 
