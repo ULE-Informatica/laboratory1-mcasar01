@@ -145,6 +145,41 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
 
 
 ```
+
+## Comparación de las compilaciones:
+
+### Compilación con gcc sin estándares:
+
+* 
+
+* 
+
+* 
+
+### Compilación con g++ sin estándares:
+
+*
+
+*
+
+*
+
+### Compilación con gcc y estándar c99:
+
+*
+
+*
+
+*
+### Compilación con gcc y estándar c11:
+
+*
+
+*
+
+*
+
+
 En mi caso , he decidido solucionar los errores para el caso de compilacion con GCC y estándar C99. En el archivo ***exampleStrings_warnings***, se muestra en el código el porqué de los fallos , con un comentario en la linea de código correspondiente. En el archivo ***exampleStrings_corregido.c*** se muestra el código ya corregido sin warnings tras la compilación.
 
 
