@@ -22,14 +22,14 @@ enum { BUFFER_MAX_SIZE = 1024 };
 const char* s1 = R"foo"(
 Hello
 World
-)"foo"
+)"foo" // Esta utilizando un Raw String literal , este estándar no permite su utilización.
 const char* s2 = "\nHello\nWorld\n";
 
 void gets_example_func(void) {
   char buf[BUFFER_MAX_SIZE];
  
   if (fgets(buf, sizeof(buf), stdin) == NULL) {
-        return 1; /* Es una función VOID , no retorna ningun valor. Solucion: Eliminar el return o parar la ejecución del programa, con una instruccion exit(0)*/
+        return 1; /* Es una función VOID , no retorna ningun valor. Solucion: Eliminar el return bastaría para que funcionase*/
   }
   buf[strlen(buf) - 1] = '\0';
 }
