@@ -158,6 +158,8 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
 
 * Warning por la conversión de un string constant to 'char* (*ptr_char)
 
+* Los demás warnings son los mismos que en la ***Compilación de gcc sin estándares***
+
 
 ### Compilación con gcc y estándar c99:
 
