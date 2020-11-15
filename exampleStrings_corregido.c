@@ -11,17 +11,14 @@ char array2[] = { 'F', 'o', 'o', 'b', 'a', 'r', '\0' };
  
 enum { BUFFER_MAX_SIZE = 1024 };
  
-const char* s1 = R"foo(
-Hello
-  World
-)foo";
+const char* s1 = "foo(HelloWorld)foo";
 const char* s2 = "\nHello\nWorld\n";
 
 void gets_example_func(void) {
   char buf[BUFFER_MAX_SIZE];
  
   if (fgets(buf, sizeof(buf), stdin) == NULL) {
-        exit(0);
+        
   }
   buf[strlen(buf) - 1] = '\0';
 }
@@ -61,7 +58,7 @@ int main(int argc, char *argv[])
     int size_array2 = 100;
    // char analitic1[size_array1]="аналитик";
    // char analitic2[size_array2]="аналитик";
-    char analitic3[100]="аналитик";
+  /*char analitic3[100]="аналитик"; no se usa*/
 
     puts(get_dirname(__FILE__));
 

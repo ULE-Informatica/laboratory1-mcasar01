@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
     
    // char analitic1[size_array1]="аналитик";
    // char analitic2[size_array2]="аналитик";
-    char analitic3[100]="аналитик";
+    char analitic3[100]="аналитик"; 
 
     puts(get_dirname(__FILE__));
 
@@ -85,11 +85,9 @@ int main(int argc, char *argv[])
     
     get_y_or_n();
 
-    printf ("%s",array1);/*Encontramos 2 errores, se quiere imprimir la longitud del array1 , por tanto deberiamos poner size_arrray1. Por otro lado, el primer parametro que recibe la función printf deberia ser %d ,
-                           que se utiliza para mostrar números y no %s , que se utiliza para imprimir una cadena de caracteres*/
+    printf ("%s",array1);
     printf ("\n");
-    printf ("%s",array2);/*Encontramos 2 errores, se quiere imprimir la longitud del array1 , por tanto deberiamos poner size_arrray1. Por otro lado, el primer parametro que recibe la función printf deberia ser %d ,
-                           que se utiliza para mostrar números y no %s , que se utiliza para imprimir una cadena de caracteres*/
+    printf ("%s",array2);
     printf ("\n");
  
     puts (s1);
