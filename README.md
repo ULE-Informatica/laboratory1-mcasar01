@@ -6,7 +6,7 @@ Para la realización de la práctica, he utilizado mi equipo personal , con SO W
 Para poder compilar el programa utilizando GCC , e instalado MinGW y la extensión de GCC. Una vez realizada la intalación, desde un CMD , he clonado el repositorio de GitHub a una carpeta de mi equipo y a continuación he ido realizando las siguientes compilaciones, obteniendo las diferentes salidas:
 
 
-## Compilacion con gcc sin estandares --> gcc -Wall exampleStrings.c
+## Salida de compilación con gcc sin estándares --> gcc -Wall exampleStrings.c
 ```
 
 La salida obtenida es la siguiente:
@@ -31,7 +31,7 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
 
 ```
 
-## Compilacion con g++ sin estandares --> g++ -Wall exampleStrings.c
+## Salida de compilación con g++ sin estándares --> g++ -Wall exampleStrings.c
 ```
 exampleStrings.c: In function 'void gets_example_func()':
 exampleStrings.c:32:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
@@ -51,7 +51,7 @@ exampleStrings.c:73:10: warning: unused variable 'analitic3' [-Wunused-variable]
 
 ```
 
-A continuación,he realizado la compilación con el estandar c99 y c11 , las salidas de compilación son las siguientes:
+A continuación,he realizado la compilación con los estándares c99 y c11 , las salidas de compilación son las siguientes:
 
 
 ## Salida de compilación con el estándar c99 --> gcc -Wall -std=c99 exampleStrings.c
@@ -185,12 +185,12 @@ En mi caso , he decidido solucionar los errores para el caso de compilacion con 
 
 ## Reglas CMU-Cert que incumple el código:
 
-* STR31-C: Guarantee that storage for strings has sufficient space for character data and the null terminator --> Línea 51
-* MSC34-C: Do not use deprecated or obsolescent functions --> Línea 51
-* MEM35-C. Always allocate sufficient memory for an object --> Líneas 17,18,66
-* STR30-C: Do not attempt to modify String literals --> Línea 101
-* ARR02-C. Explicitly specify array bounds, even if implicitly defined by an initializer --> Línea 18
-* ARR32-C	Ensure size arguments for variable length arrays are in a valid --> Linea 48
+* **STR31-C:** Guarantee that storage for strings has sufficient space for character data and the null terminator --> Línea 51
+* **MSC34-C:** Do not use deprecated or obsolescent functions --> Línea 51
+* **MEM35-C:** Always allocate sufficient memory for an object --> Líneas 17,18,66
+* **STR30-C:** Do not attempt to modify String literals --> Línea 101
+* **ARR02-C:** Explicitly specify array bounds, even if implicitly defined by an initializer --> Línea 18
+* **ARR32-C:**	Ensure size arguments for variable length arrays are in a valid --> Linea 48
 
 
 
