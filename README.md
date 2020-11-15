@@ -3,7 +3,7 @@ Laboratory 1
 
 
 Para la realización de la práctica, he utilizado mi equipo personal , con SO Windows 10.
-Para poder compilar el programa utilizando GCC , e instalado MinGW y la extensión de GCC. Una vez realizada la intalación, desde un CMD , he clonado el repositorio de GitHub a una carpeta de mi equipo y a continuación he ido realizando las siguientes compilaciones, obteniendo las diferentes salidas:
+Para poder compilar el programa utilizando GCC , e instalado MinGW y la extensión de GCC [gcc (MinGW.org GCC Build-2) 9.2.0]. Una vez realizada la intalación, desde un CMD , he clonado el repositorio de GitHub a una carpeta de mi equipo y a continuación he ido realizando las siguientes compilaciones, obteniendo las diferentes salidas:
 
 
 ## Salida de compilación con gcc sin estándares --> gcc -Wall exampleStrings.c
@@ -150,34 +150,25 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
 
 ### Compilación con gcc sin estándares:
 
-* 
+* Warning por la función Void 'gets_example_func' que devuelve un entero.
 
-* 
-
-* 
+* Warning por la presencia de variables que no se utilizan : 'analitic3' , 'size_array2' , 'size_array1'
 
 ### Compilación con g++ sin estándares:
 
-*
+* Warning por la conversión de un string constant to 'char* (*ptr_char)
 
-*
-
-*
 
 ### Compilación con gcc y estándar c99:
 
-*
+* Warning por la declaracion de un Raw String Literal en varias lineas
 
-*
+* Warning por variable S2 sin declarar, primer uso en esta función.
 
-*
+* El resto de Warnings son los mismo que los comentados en la ***Compilación de gcc sin estándares***
 ### Compilación con gcc y estándar c11:
 
-*
-
-*
-
-*
+* Mismos warnings que con el estándar c99
 
 
 En mi caso , he decidido solucionar los errores para el caso de compilacion con GCC y estándar C99. En el archivo ***exampleStrings_warnings***, se muestra en el código el porqué de los fallos , con un comentario en la linea de código correspondiente. En el archivo ***exampleStrings_corregido.c*** se muestra el código ya corregido sin warnings tras la compilación.
