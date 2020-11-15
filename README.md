@@ -1,6 +1,8 @@
 # dps-lab-1
 Laboratory 1
 
+### MARTIN CASADO RODRÍGUEZ
+
 
 Para la realización de la práctica, he utilizado mi equipo personal , con SO Windows 10.
 Para poder compilar el programa utilizando GCC , e instalado MinGW y la extensión de GCC [gcc (MinGW.org GCC Build-2) 9.2.0]. Una vez realizada la intalación, desde un CMD , he clonado el repositorio de GitHub a una carpeta de mi equipo y a continuación he ido realizando las siguientes compilaciones, obteniendo las diferentes salidas:
