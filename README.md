@@ -30,6 +30,27 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
 
 
 ```
+
+## Compilacion con g++ sin estandares --> g++ -Wall exampleStrings.c
+```
+exampleStrings.c: In function 'void gets_example_func()':
+exampleStrings.c:32:16: error: return-statement with a value, in function returning 'void' [-fpermissive]
+   32 |         return 1;
+      |                ^
+exampleStrings.c: In function 'int main(int, char**)':
+exampleStrings.c:67:23: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings]
+   67 |     char *ptr_char  = "new string literal";
+      |                       ^~~~~~~~~~~~~~~~~~~~
+exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable]
+   68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
+exampleStrings.c:69:9: warning: unused variable 'size_array2' [-Wunused-variable]
+   69 |     int size_array2 = 100;
+      |         ^~~~~~~~~~~
+exampleStrings.c:73:10: warning: unused variable 'analitic3' [-Wunused-variable]
+   73 |     char analitic3[100]="ð░ð¢ð░ð╗ð©Ð          ^~~~~~~~~
+
+```
+
 A continuación,he realizado la compilación con el estandar c99 y c11 , las salidas de compilación son las siguientes:
 
 
@@ -131,9 +152,10 @@ En mi caso , he decidido solucionar los errores para el caso de compilacion con 
 
 * STR31-C: Guarantee that storage for strings has sufficient space for character data and the null terminator --> Línea 51
 * MSC34-C: Do not use deprecated or obsolescent functions --> Línea 51
-* MEM35-C. Always allocate sufficient memory for an object --> Líneas 17,18,61
+* MEM35-C. Always allocate sufficient memory for an object --> Líneas 17,18,66
 * STR30-C: Do not attempt to modify String literals --> Línea 101
 * ARR02-C. Explicitly specify array bounds, even if implicitly defined by an initializer --> Línea 18
+* ARR32-C	Ensure size arguments for variable length arrays are in a valid --> Linea 48
 
 
 
