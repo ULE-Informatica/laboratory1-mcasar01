@@ -30,11 +30,11 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð
 
 
-````
+```
 A continuación,he realizado la compilación con el estandar c99 y c11 , las salidas de compilación son las siguientes:
 
-´´´
-##Salida de compilación con el estándar c99 - ***gcc -Wall -std=c99***
+
+## Salida de compilación con el estándar c99 - ***gcc -Wall -std=c99***
 ```
 Salida:
 
@@ -78,8 +78,7 @@ exampleStrings.c:68:9: warning: unused variable 'size_array1' [-Wunused-variable
    68 |     int size_array1 = strlen("ð░ð¢ð░ð╗ð©Ð         ^~~~~~~~~~~
 
 
-```
-##Salida de compilación con el estándar c11 - ***gcc -Wall -std=c11***
+## Salida de compilación con el estándar c11 - ***gcc -Wall -std=c11***
 ```
 
 Salida:
