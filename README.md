@@ -3,9 +3,11 @@ Laboratory 1
 
 
 Para la realización de la práctica, he utilizado mi equipo personal , con SO Windows 10.
-Para poder compilar el programa utilizando GCC , e instalado MinGW y la extensión de GCC. Una vez realizada la intalación, desde un CMD , he clonado el repositorio de GitHub a una carpeta de mi equipo y he ejcutado la siguiente instrucción para realizar la compilación:
+Para poder compilar el programa utilizando GCC , e instalado MinGW y la extensión de GCC. Una vez realizada la intalación, desde un CMD , he clonado el repositorio de GitHub a una carpeta de mi equipo y a continuación he ido realizando las siguientes compilaciones, obteniendo las diferentes salidas:
 
-gcc -Wall exampleStrings.c
+## **Compilacion con gcc sin estandares**
+
+***gcc -Wall exampleStrings.c***
 
 La salida obtenida es la siguiente:
 
