@@ -22,7 +22,7 @@ enum { BUFFER_MAX_SIZE = 1024 };
 const char* s1 = R"foo"(
 Hello
 World
-)"foo" // Esta utilizando un Raw String literal en varias lineas , este estándar no permite su utilización.
+)"foo" // Está utilizando un Raw String literal en varias lineas , este estándar no permite su utilización.
 const char* s2 = "\nHello\nWorld\n";
 
 void gets_example_func(void) {
@@ -45,7 +45,7 @@ const char *get_dirname(const char *pathname) {
  
 
 void get_y_or_n(void) {  
-	char response[8]; /*Solo es necesario reservar memoria para un caracter y el '/0' final, de esta manera estamos reservando memoria demás sin ningún sentido. Solución: [2]*/
+	char response[8]; /*Sólo es necesario reservar memoria para un caracter y el '/0' final, de esta manera estamos reservando memoria demás sin ningún sentido. Solución: [2]*/
 
 	printf("Continue? [y] n: ");  
 	gets(response); /*gets no es considerado seguro y actualmente su uso no está aconsejado , no tiene en cuenta el tamaño del buffer , ya que no lo toma como parámetro , por tanto, es muy fácil que se produzca un desbordamiento del mismo.

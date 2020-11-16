@@ -182,10 +182,11 @@ En mi caso , he decidido solucionar los errores para el caso de compilacion con 
 
 * **STR31-C:** Guarantee that storage for strings has sufficient space for character data and the null terminator --> Línea 51
 * **MSC34-C:** Do not use deprecated or obsolescent functions --> Línea 51
-* **MEM35-C:** Always allocate sufficient memory for an object --> Líneas 17,18,66
+* **STR36-C - STR11-C:** Do not specify the bound of a character array initialized with a string literal --> Líneas 71,72,73
 * **STR30-C:** Do not attempt to modify String literals --> Línea 101
+* **MEM35-C:** Always allocate sufficient memory for an object --> Líneas 17,18,66
 * **ARR02-C:** Explicitly specify array bounds, even if implicitly defined by an initializer --> Línea 18
-* **ARR32-C:**	Ensure size arguments for variable length arrays are in a valid --> Linea 48
+* **ARR32-C:**	Ensure size arguments for variable length arrays are in a valid --> Líneas 48 , 73
 
 
 

@@ -34,7 +34,7 @@ const char *get_dirname(const char *pathname) {
  
 
 void get_y_or_n(void) {  
-	char response[2]; //Hay que guardar para la 'y' o la 'n' y añadir el '/0' final.
+	char response[2]; //Hay que guardar espacio para la 'y' o la 'n' y añadir el '/0' final.
 
 	printf("Continue? [y] n: ");  
 	fgets(response,sizeof(response),stdin); //Se cambia el gets() por fgets() por el problema comentado de desbordamiento de buffer
